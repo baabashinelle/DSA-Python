@@ -1,4 +1,4 @@
-# stack implementation 
+# stack implementation using lists in python
 
 # Creating a stack
 def createStack():
