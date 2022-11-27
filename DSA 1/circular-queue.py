@@ -17,12 +17,12 @@ class MyCircularQueue():
         elif (self.head == -1):
             self.head = 0
             self.tail = 0
-            # this means tail is at the index you're inserting at
+            # this means tail is the index you're inserting at
             self.queue[self.tail] = data
         else:
             # this below gives the next tail position to insert at
             self.tail = (self.tail + 1) % self.k
-            # this means tail is at the index you're inserting at
+            # this means tail is the index you're inserting at
             self.queue[self.tail] = data
 
     # Delete an element from the circular queue
