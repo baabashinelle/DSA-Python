@@ -26,3 +26,49 @@ if __name__ == '__main__':
     while linked_list.head != None:
         print(linked_list.head.item, end=" ")
         linked_list.head = linked_list.head.next
+
+
+
+#from amulya's academy
+# create a node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.ref = None # ref is the address each node stores
+# you can create individual nodes from the node class like so :
+# node1 = Node(10)
+# node2 = Node(20) etc. 
+# at this point, they'll all not be linked since the ref property is none. so they dont have addresses
+# to connect individual nodes, create another class to connect them
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    # code all the methods of what u can do in a linkedlist
+    # operations for traversal
+
+    def print_LL(self):
+        if self.head is None:
+            print("linked list is empty")
+        else:
+            n = self.head
+            while n is not None:
+                print(n.data)
+                n = n.ref
+    
+    # adding elements at the beginning of the linked list
+    def add_begin(self,data):
+        new_node = Node(data)
+        new_node.ref = self.head
+        self.head = new_node
+
+    # adding elements at the end of the linked list
+    def add_end(self,data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+        else:
+            n = self.head
+            while n.ref is not None:
+                n = n.ref
+            n.ref = new_node
