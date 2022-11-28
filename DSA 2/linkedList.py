@@ -53,7 +53,7 @@ class LinkedList:
         else:
             n = self.head
             while n is not None:
-                print(n.data)
+                print(n.data, "-->",end=" ")
                 n = n.ref
     
     # adding elements at the beginning of the linked list
