@@ -63,3 +63,72 @@ class DoublyLL:
                 n = n.nref
             n.nref = new_node
             new_node.pref = n
+
+
+    #deletion of node at the beginning of doubly linked list
+    def delete_begin(self):
+        # if its empty
+        if self.head is None:
+            print("DLL is empty!")
+            return
+            # if it contains one node
+        if self.head.nref is None:
+            self.head = None
+            print("DLL is empty after deleting this node")
+            # if it contains more than one node
+        else:
+            self.head = self.head.nref
+            self.head.pref = None
+
+    #deletion of node at the end of doubly linked list
+    def delete_end(self):
+        # if its empty
+        if self.head is None:
+            print("DLL is empty!")
+            return
+        # if it contains one node
+        if self.head.nref is None:
+            self.head = None
+            print("DLL is empty after deleting this node")
+            # if it contains more than one node
+        else:
+            n = self.head
+            while n.nref is not None:
+                n = n.ref
+            n.pref.nref = None
+
+    
+
+
+
+    #deletion of node by value
+    def delete_by_value(self,x):
+        # if its empty
+        if self.head is None:
+            print("DLL is empty!")
+            return
+        # if it contains one node
+        if self.head.nref is None:
+            if x==self.head.data:
+                self.head = None
+            else:
+                print("DLL is empty after deleting this node")
+                return
+        # if it is the first node
+        if self.head.data == x:
+            self.head = self.head.nref
+            self.head.pref = None
+        # if it is middle nodes
+        n = self.head
+        while n.nref is not None:
+            if x==n.data:
+                break
+            n = n.nref
+        if n.nref is not None:
+            n.nref.pref = n.pref
+            n.pref.nref = n.nref
+        else:
+            if n.data == x:
+                n.pref.nref = None
+            else:
+                print("x is not present in dll")
