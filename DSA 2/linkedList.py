@@ -72,3 +72,17 @@ class LinkedList:
             while n.ref is not None:
                 n = n.ref
             n.ref = new_node
+
+    # adding elements between nodes after a node
+    def add_after(self,data,x):
+        n = self.head
+        while n is not None:
+            if x == n.data:
+                break
+            n = n.ref
+        if n is None:
+            print("node is not present in LL")
+        else:
+            new_node = Node(data)
+            new_node.ref = n.ref
+            n.ref = new_node
