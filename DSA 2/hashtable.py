@@ -9,7 +9,6 @@ def checkPrime(n):
     for i in range(2, n//2):
         if n % i == 0:
             return 0
-
     return 1
 
 
@@ -19,7 +18,6 @@ def getPrime(n):
 
     while not checkPrime(n):
         n += 2
-
     return n
 
 
@@ -46,3 +44,23 @@ print(hashTable)
 removeData(123)
 
 print(hashTable)
+
+
+
+## another example
+def get_hash(key):
+    h = 0
+    for char in key:
+        h += ord(char)
+    return h % 100
+
+class HashTable:
+    def __iniit__(self):
+        self.MAX = 100
+        self.arr = [None for i in range(self.MAX)]
+
+    def get_hash(self,key):
+        h = 0
+        for char in key:
+            h += ord(char)
+        return h % self.MAX
