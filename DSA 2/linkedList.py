@@ -94,3 +94,18 @@ class LinkedList:
             self.head = new_node
         else:
             print("This linked list is not empty")
+
+
+#class Node:
+#     def __init__(self,val,next=None):
+#         self.val = val
+#         self.next = next
+
+# node_a = Node(10)
+# node_b = Node(11)
+# node_c = Node(12)
+
+# node_a.next = node_b
+# node_b.next = node_c
+
+# print(node_a)
