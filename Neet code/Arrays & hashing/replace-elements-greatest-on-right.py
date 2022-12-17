@@ -8,7 +8,7 @@ class Solution(object):
         # replace the current with the next greatest element
                 arr[i] = last 
         # update greatest element if needed
-                last = max(last, cur)
+                last = max(last, cur) #max returns the largest number
         return arr
 
 
