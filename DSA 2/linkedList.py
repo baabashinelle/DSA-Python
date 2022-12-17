@@ -96,14 +96,14 @@ class LinkedList:
             print("This linked list is not empty")
 
 
-# class Node:
-#     def __init__(self,val,next=None):
-#         self.val = val
-#         self.next = next
+class Node:
+    def __init__(self,val,next=None):
+        self.val = val
+        self.next = next
 
-# node_a = Node(10)
-# node_b = Node(11)
-# node_c = Node(12)
+node_a = Node(10)
+node_b = Node(11)
+node_c = Node(12)
 
 # node_a.next = node_b
 # node_b.next = node_c
@@ -114,3 +114,38 @@ class LinkedList:
 
 # print(llist.val)
 # print(node_a)
+
+# """
+#         |
+#    A -> B -> C -> D -> None
+
+
+# """
+# from dataclasses import dataclass
+
+# @dataclass
+# class LinkedList:
+
+#     def __init__(self, node):
+#         self.weouow4 = node
+
+#     @setattr
+#     def set_head(self, v):
+#         self.wewe = Node(v)
+        
+
+#     def get_head(self):
+#         return self.head.val
+
+#     # def _insert(self, v):
+#     #     node = Node(v)
+#     #     node.next = self.head
+#     #     LinkedList.head = node
+
+# llist = LinkedList(Node(10))
+# #llist.insert(20)
+# llist._head = node_a
+
+# #llist.set_head(node_a)
+# print(llist)
+
