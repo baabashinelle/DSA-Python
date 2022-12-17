@@ -26,9 +26,11 @@ class Solution(object):
 
         # last = len(arr)-1
         # last = -1
-        # for i in range(len(arr)-2):
-        #     if arr[i]+1 > i:
-        #         i = arr[i] + 1
-        #         arr.append(last)
-        #         return arr
+        # for i in range(len(arr)-1, -1, -1):
+        # store the current element (needed for updating the greatest)
+        #         cur = arr[i]
+        # replace the current with the next greatest element
+        #         arr[i] = last 
+        # update greatest element if needed
+        #         last = max(last, cur)
         # return arr
