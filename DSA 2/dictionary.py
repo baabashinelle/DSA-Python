@@ -87,7 +87,7 @@ def anagram(s, t):
         else:
             return False
 
-        if not seen[letter]:
+        if not seen[letter]: #if seen[letter] == 0
             del seen[letter]
 
     if not seen: #if dict is empty
