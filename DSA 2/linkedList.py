@@ -96,7 +96,7 @@ class LinkedList:
             print("This linked list is not empty")
 
 
-#class Node:
+# class Node:
 #     def __init__(self,val,next=None):
 #         self.val = val
 #         self.next = next
@@ -107,5 +107,10 @@ class LinkedList:
 
 # node_a.next = node_b
 # node_b.next = node_c
+# llist = Node(10, Node(20, Node(30, Node(40))))
+# while llist:
+#     print(llist.val)
+#     llist = llist.next
 
+# print(llist.val)
 # print(node_a)
